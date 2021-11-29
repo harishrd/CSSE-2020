@@ -1,0 +1,18 @@
+# 4.a Program to check if the given number is a Fibonacci number or not
+
+from math import sqrt
+
+def fib(n):
+    if(n >=0 ):
+        sr1 = int(sqrt(5*pow(n,2) + 4))
+        sr2 = int(sqrt(5*pow(n,2) - 4))
+        if((sr1 == n) or (sr2 == n)):
+            return true;
+        else:
+            return false
+        
+n = int(input("Enter a integer number: "))
+if fib(n) == "true":
+    print(n , "is a fibonacci number.")
+else:
+    print(n , "is a not fibonacci number.")
