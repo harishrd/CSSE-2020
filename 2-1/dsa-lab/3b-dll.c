@@ -166,7 +166,6 @@ void deqdemo()
     }
 }
 
-
 void search()
 {	
 	NODE temp;
