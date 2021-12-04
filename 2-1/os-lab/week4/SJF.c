@@ -17,10 +17,12 @@ main() {
 	btemp=ptemp=wait=avg1=avg2=a=0;
 	for(i=0;i<n;i++) {
 		printf("\nEnter the process no: ");
-		scanf("%d", &s[i],pno);
+		scanf("%d", &s[i].pno);
 		printf("\nEnter the burst time: ");
 		scanf("%d", &s[i].btime);
 	}
+
+	//sortimg the processes in ascending order of their burst time
 	for(i=0;i<n;i++) {
 		for(j=i+1;j<n;j++) {
 			if(s[i].btime > s[j].btime) {
@@ -32,7 +34,7 @@ main() {
 			}
 		}
 	}
-	
+
 	printf("\n\nThe process details..");
 	printf("\nProcess number \t Burst time \t Waiting time \t Turnaround time");
 	for(i=0;i<n;i++) {
@@ -42,7 +44,7 @@ main() {
 		avg2=avg2+wait+s[i].btime;
 		wait = wait+s[i].btime;
 	}
-	
+
 	printf("\n\ngantt chart\n\n");
 	printf("\n___________");
 	printf("%d\t\t",a);
@@ -50,11 +52,11 @@ main() {
 		a=a+s[i].btime;
 		printf("%d\t\t",a);
 	}
-	
+
 	printf("\n____________");
 	wt = avg1/n;
 	ta = avg2/n;
 	printf("\nAverage Waiting Time is %f\n", wt);
 	printf("\nAverage Turnaround Time is %f\n", ta);
-	
+
 }
