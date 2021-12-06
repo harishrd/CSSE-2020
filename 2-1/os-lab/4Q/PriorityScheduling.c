@@ -1,4 +1,4 @@
-// PRIORITY SCHEDULING ALGORITHM
+// PRIORITY SCHEDULING ALGORITHM (V)
 
 #include<stdio.h>
 int main()
@@ -16,7 +16,7 @@ int main()
 		scanf("%d",&priority[i]);
 	}
 	priority[9]=11;
-	printf("\n\n process\t|turnaround time|waiting time\n");
+	printf("\n\n process|turnaround time|waiting time\n");
 	for(time=0;remain!=0;time++)
 	{
 		smallest=9;
@@ -35,6 +35,6 @@ int main()
 		bt[smallest]=0;
 	}
 	printf("\n avg waiting time=%f\n",sum_wait*1.0/n);
-	printf("\n avg turnaround time=5f\n",sum_turnaround*1.0/n);
+	printf("\n avg turnaround time=%f\n",sum_turnaround*1.0/n);
 	return 0;
 }
