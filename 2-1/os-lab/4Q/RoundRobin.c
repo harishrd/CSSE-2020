@@ -48,22 +48,3 @@ main() {
    printf("\nAverage turnaround time is: %f", atat);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
