@@ -39,3 +39,30 @@ int main()
 	printf("\nAverage Waiting Time is %f\n", avg1);
 	printf("\nAverage Turnaround Time is %f\n", avg2);
 }
+
+/*
+Output:
+
+---FCFS algorithm---
+
+Enter no. of processes: 3
+Enter the process number:1
+/nEnter the burst time: 2
+Enter the process number:2
+/nEnter the burst time: 3
+Enter the process number:3
+/nEnter the burst time: 5
+
+The process details are...
+
+Process	Burst Time	Waiting Time	Turnaround Time
+1	2		0		2
+
+2	3		2		5
+
+3	5		5		10
+
+Average Waiting Time is 2.333333
+
+Average Turnaround Time is 5.666667
+*/
