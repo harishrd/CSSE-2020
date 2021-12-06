@@ -1,4 +1,4 @@
-// SHORTEST JOB FIRST (SJF) algorithm
+// SHORTEST JOB FIRST (SJF) ALGORITHM (V)
 
 #include<stdio.h>
 
@@ -25,11 +25,12 @@ main()
 	for(i=0;i<n;i++) {   		 				// [2,1,3]  b.time
 		for(j=i+1;j<n;j++) {	 				// [1,2,3]  p.no    		btemp =2
 			if(s[i].btime > s[j].btime) {		// [2,1,3] new  p.no		ptemp = 1
-				btemp = s[i].btime;				// [2,1,3] new b.time wrt p.no
+				btemp = s[i].btime;
 				ptemp = s[i].pno;
-				s[i].btime = btemp;
+				s[i].btime = s[j].btime;
 				s[i].pno = s[j].pno;
 				s[j].pno = ptemp;
+				s[j].btime = btemp;
 			}
 		}
 	}
