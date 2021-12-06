@@ -59,3 +59,46 @@ main()
 	printf("\nAverage Turnaround Time is %f\n", ta);
 	
 }
+
+/*
+Output:
+
+
+ SJF algorithm 
+
+************
+Enter the no. of processes: 3
+
+Enter the process no: 1
+
+Enter the burst time: 2
+
+Enter the process no: 2
+
+Enter the burst time: 3
+
+Enter the process no: 3
+
+Enter the burst time: 3
+
+
+The process details..
+
+Process number 	 Burst time 	 Waiting time 	 Turnaround time
+1 		 2		 0 		 2
+2 		 3		 2 		 5
+3 		 3		 5 		 8
+
+
+gantt chart
+
+________________________________________________________________
+
+0		2		5		8		
+________________________________________________________________
+
+Average Waiting Time is 2.333333
+
+Average Turnaround Time is 5.000000
+
+/*
