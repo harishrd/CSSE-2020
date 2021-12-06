@@ -1,4 +1,4 @@
-// PRIORITY SCHEDULING ALGORITHM (V)
+// PRIORITY SCHEDULING ALGORITHM
 
 #include<stdio.h>
 int main()
@@ -16,7 +16,7 @@ int main()
 		scanf("%d",&priority[i]);
 	}
 	priority[9]=11;
-	printf("\n\n process|turnaround time|waiting time\n");
+	printf("\n\nprocess |   burst time  |turnaround time| waiting time\n");
 	for(time=0;remain!=0;time++)
 	{
 		smallest=9;
@@ -29,7 +29,7 @@ int main()
 		}
 		time+=bt[smallest];
 		remain--;
-		printf("p[%d]\t|\t%d\t|\t%d\n",smallest+1,time-at[smallest],time-at[smallest]-at[smallest]);
+		printf("p[%d]\t|\t%d\t|\t%d\t|\t%d\n",smallest+1,bt[smallest],time-at[smallest],time-at[smallest]-bt[smallest]);
 		sum_wait+=time-at[smallest]-bt[smallest];
 		sum_turnaround+=time-at[smallest];
 		bt[smallest]=0;
@@ -46,11 +46,11 @@ enter arrivaltime,burst time and priority for process p2:0 4 3
 enter arrivaltime,burst time and priority for process p3:0 1 2
 enter arrivaltime,burst time and priority for process p4:0 6 4
 
- process|turnaround time|waiting time
-p[1]	|	5	|	5
-p[3]	|	7	|	7
-p[2]	|	12	|	12
-p[4]	|	19	|	19
+process |   burst time  |turnaround time| waiting time
+p[1]	|	5	|	5	|	0
+p[3]	|	1	|	7	|	6
+p[2]	|	4	|	12	|	8
+p[4]	|	6	|	19	|	13
 
  avg waiting time=6.750000
 
