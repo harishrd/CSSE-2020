@@ -18,7 +18,7 @@ int main()
 	for(i=0;i<n;i++){
 		printf("Enter the process number:");
 		scanf("%d",&f[i].pno);
-		printf("/nEnter the burst time: ");
+		printf("\nEnter the burst time: ");
 		scanf("%d",&f[i].btime);	
 	}
 	
