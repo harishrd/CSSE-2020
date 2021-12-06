@@ -38,3 +38,21 @@ int main()
 	printf("\n avg turnaround time=%f\n",sum_turnaround*1.0/n);
 	return 0;
 }
+/*
+Output:
+enter the number of process:4
+enter arrivaltime,burst time and priority for process p1:0 5 1
+enter arrivaltime,burst time and priority for process p2:0 4 3
+enter arrivaltime,burst time and priority for process p3:0 1 2
+enter arrivaltime,burst time and priority for process p4:0 6 4
+
+ process|turnaround time|waiting time
+p[1]	|	5	|	5
+p[3]	|	7	|	7
+p[2]	|	12	|	12
+p[4]	|	19	|	19
+
+ avg waiting time=6.750000
+
+ avg turnaround time=10.750000
+*/
