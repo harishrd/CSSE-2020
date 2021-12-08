@@ -6,7 +6,7 @@ int main()
 {
 	int n,fit,mem[10],y[10],z[10],a,d; //y[]-best fit(a)   z[]-worst fit(d)
 	int j=1,m,i;
-	
+
 	printf("\nEnter the no. of memory blocks: ");
 	scanf("%d",&n);
 	printf("\nEnter the memory size of the blocks: ");
@@ -22,7 +22,7 @@ int main()
 			break;
 		}
 	}
-	for(i=0;i<n;i++) 
+	for(i=0;i<n;i++)
 	{
 		if(fit <= mem[i])
 		{
@@ -30,11 +30,11 @@ int main()
 			z[j] = mem[i];
 			j++;
 		}
-		
+
 		m = j-1;
 		a = y[j];
-		j =1; 	
-		
+		j =1;
+
 		for(j=2;j<=m;j++) //best fit
 		{
 			if(a > y[j])
@@ -42,9 +42,9 @@ int main()
 				a = y[j];
 			}
 		}
-		
+
 		d = z[1];
-		
+
 		for(j=2;j<=m;j++) //worst fit
 		{
 			if(d <= z[j])
@@ -61,18 +61,5 @@ int main()
 		printf("\nThe best fit is: %d\n",a);
 		printf("\nThe worst fit is: %d\n",d);
 	}
-	return 0;	
+	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

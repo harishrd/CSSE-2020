@@ -32,7 +32,7 @@ int main()
 				exit(0);
 				break;
 		}
-	}		
+	}
 }
 
 int wait(int s)
@@ -55,14 +55,9 @@ void producer()
 void consumer()
 {
 	mutex=wait(mutex);
-	full=signal(full);
-	empty = wait(empty);
+	empty = signal(empty);
+	full=wait(full);
 	printf("\nConsumer consumes item %d",x);
 	x--;
 	mutex=signal(mutex);
 }
-
-
-
-
-

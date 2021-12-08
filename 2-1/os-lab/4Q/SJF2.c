@@ -34,7 +34,7 @@ main()
 			}
 		}
 	}
-	
+
 	printf("\n\nThe process details..\n");
 	printf("\nProcess number \t Burst time \t Waiting time \t Turnaround time");
 	for(i=0;i<n;i++) {
@@ -44,7 +44,7 @@ main()
 		avg2=avg2+wait+s[i].btime;
 		wait = wait+s[i].btime;
 	}
-	
+
 	printf("\n\n\ngantt chart\n");
 	printf("\n________________________________________________________________\n\n");
 	printf("%d\t\t",a);
@@ -52,20 +52,20 @@ main()
 		a=a+s[i].btime;
 		printf("%d\t\t",a);
 	}
-	
+
 	printf("\n________________________________________________________________\n");
 	wt = avg1/n;
 	ta = avg2/n;
 	printf("\nAverage Waiting Time is %f\n", wt);
 	printf("\nAverage Turnaround Time is %f\n", ta);
-	
+
 }
 
 /*
 Output:
 
 
- SJF algorithm 
+ SJF algorithm
 
 ************
 Enter the no. of processes: 3
@@ -95,11 +95,11 @@ gantt chart
 
 ________________________________________________________________
 
-0		2		5		8		
+0		2		5		8
 ________________________________________________________________
 
 Average Waiting Time is 2.333333
 
 Average Turnaround Time is 5.000000
 
-/*
+*/
