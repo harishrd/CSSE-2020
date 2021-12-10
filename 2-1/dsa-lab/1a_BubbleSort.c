@@ -3,7 +3,7 @@
 int main()
 {
 	int i,j,n,arr[50],temp;
-	
+
 	printf("Enter the number of integers: ");
 	scanf("%d",&n);
 	printf("\nEnter the %d integers: ",n);

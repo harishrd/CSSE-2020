@@ -126,61 +126,7 @@ NODE deleteend()
     }
     cur->llink = NULL;
     printf("\nThe employee node with the svec:%s is deleted",cur->svec);
-    free(cu
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	r);
+    free(cur);
     prev->rlink = NULL;
     count--;
     return first;
@@ -202,16 +148,16 @@ void deqdemo()
             case 2:
                 first=deletefront();
                 break;
-            case 3: 
+            case 3:
                 first=insertend();
                 break;
-            case 4: 
+            case 4:
                 first=deleteend();
                 break;
-            case 5: 
+            case 5:
                 display();
                 break;
-            default: 
+            default:
                 return;
         }
     }
@@ -233,38 +179,5 @@ int main()
 		printf("\n8: Exit");
 		printf("\nPlease enter your chioce: ");
 		scanf("%d")
-		
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
