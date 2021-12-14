@@ -205,7 +205,6 @@ void main()
       scanf("%d",&ch);
 
       switch(ch)
-      {
          case 1:
             printf("\nEnter the no of Employees:   ");
             scanf("%d",&n);

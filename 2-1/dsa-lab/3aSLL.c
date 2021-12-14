@@ -17,10 +17,10 @@ void traverse()
         printf("\nList is empty\n");
    else
 	{
-        temp = start;
-        while (temp != NULL) {
+         temp = start;
+         while (temp != NULL) {
             printf("Data = %d\n",
-                   temp->info);
+               temp->info);
             temp = temp->link;
         }
     }
@@ -31,8 +31,7 @@ void insertAtFront()
    int data;
    struct node* temp;
    temp = malloc(sizeof(struct node));
-   printf("\nEnter number to"
-        " be inserted : ");
+   printf("\nEnter number to be inserted : ");
    scanf("%d", &data);
    temp->info = data;
    temp->link = start;
@@ -67,8 +66,8 @@ void insertAtPosition()
    newnode->link = 0;
    while (i < pos - 1)
    {
-     temp = temp->link;
-     i++;
+      temp = temp->link;
+      i++;
    }
    newnode->link = temp->link;
    temp->link = newnode;
@@ -76,39 +75,39 @@ void insertAtPosition()
 
 void deleteFirst()
 {
-    struct node* temp;
-    if (start == NULL)
-        printf("\nList is empty\n");
-    else {
-        temp = start;
-        start = start->link;
-        free(temp);
-    }
+   struct node* temp;
+   if (start == NULL)
+      printf("\nList is empty\n");
+   else {
+      temp = start;
+      start = start->link;
+      free(temp);
+   }
 }
 
 void deleteEnd()
 {
    struct node *temp, *prevnode;
    if (start == NULL)
-     printf("\nList is Empty\n");
+      printf("\nList is Empty\n");
    else {
-     temp = start;
-     while (temp->link != 0) {
+      temp = start;
+      while (temp->link != 0) {
          prevnode = temp;
          temp = temp->link;
-     }
-     free(temp);
-     prevnode->link = 0;
+      }
+      free(temp);
+      prevnode->link = 0;
    }
 }
 
 void deletePosition()
 {
-    struct node *temp, *position;
-    int i = 1, pos;
-    if (start == NULL)
-        printf("\nList is empty\n");
-    else
+   struct node *temp, *position;
+   int i = 1, pos;
+   if (start == NULL)
+     printf("\nList is empty\n");
+   else
 	{
       printf("\nEnter index : ");
       scanf("%d", &pos);
@@ -185,7 +184,7 @@ void sort()
          index = current->link;
          while (index != NULL)
 			{
-            if (current->info > index->info)
+            if (current->info  >  index->info)
 				{
                temp = current->info;
                current->info = index->info;
