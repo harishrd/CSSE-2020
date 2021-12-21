@@ -182,8 +182,6 @@ void lru()
 	dispPgFaultCnt(); 
 } 
 
-
-
 void lfu() 
 {     
 	int usedcnt[100];     
@@ -193,7 +191,7 @@ void lfu()
 		usedcnt[i]=0;       
 	for(i=0; i<n; i++)     
 	{           
-		printf("\n For %d :",in[i]);         
+		printf("\nFor %d :",in[i]);         
 		if(isHit(in[i]))         
 		{     
 			int hitind=getHitIndex(in[i]);             
@@ -281,7 +279,7 @@ int main()
 	int choice;     
 	while(1)     
 	{    
-		printf("\nPage Replacement Algorithms\n1.Enter data\n2.FIFO\n3.Optimal\n4.LRU\n5.L FU\n6.Second Chance\n7.Exit\nEnter your choice:"); 
+		printf("\nPage Replacement Algorithms\n1.Enter data\n2.FIFO\n3.Optimal\n4.LRU\n5.LFU\n6.Second Chance\n7.Exit\nEnter your choice:"); 
 
 		scanf("%d",&choice);         
 		switch(choice)         
@@ -310,3 +308,109 @@ int main()
 		}     
 	} 
 } 
+
+/*
+Output:
+
+Page Replacement Algorithms
+1.Enter data
+2.FIFO
+3.Optimal
+4.LRU
+5.L FU
+6.Second Chance
+7.Exit
+Enter your choice:1
+
+Enter length of page reference sequence:8
+
+Enter the page reference sequence:2 3 4 2 3 5 6 2
+
+Enter no of frames:3
+
+Page Replacement Algorithms
+1.Enter data
+2.FIFO
+3.Optimal
+4.LRU
+5.LFU
+6.Second Chance
+7.Exit
+Enter your choice:2
+
+For 2 : 2
+For 3 : 2 3
+For 4 : 2 3 4
+For 2 :No page fault
+For 3 :No page fault
+For 5 : 3 4 5
+For 6 : 4 5 6
+For 2 : 5 6 2
+Total no of page faults:6
+Page Replacement Algorithms
+1.Enter data
+2.FIFO
+3.Optimal
+4.LRU
+5.LFU
+6.Second Chance
+7.Exit
+Enter your choice:3
+
+For 2:  2
+For 3:  2 3
+For 4:  2 3 4
+For 2: No page fault
+For 3: No page fault
+For 5:  2 5 4
+For 6:  2 6 4
+For 2: No page fault
+Total no of page faults:5
+Page Replacement Algorithms
+1.Enter data
+2.FIFO
+3.Optimal
+4.LRU
+5.LFU
+6.Second Chance
+7.Exit
+Enter your choice:4
+
+For 2 : 2
+For 3 : 2 3
+For 4 : 2 3 4
+For 2 :No page fault!
+For 3 :No page fault!
+For 5 : 2 3 5
+For 6 : 6 3 5
+For 2 : 6 2 5
+Total no of page faults:6
+Page Replacement Algorithms
+1.Enter data
+2.FIFO
+3.Optimal
+4.LRU
+5.LFU
+6.Second Chance
+7.Exit
+Enter your choice:5
+
+For 2 : 2
+For 3 : 2 3
+For 4 : 2 3 4
+For 2 :No page fault!
+For 3 :No page fault!
+For 5 : 2 3 5
+For 6 : 2 3 6
+For 2 :No page fault!
+Total no of page faults:5
+Page Replacement Algorithms
+1.Enter data
+2.FIFO
+3.Optimal
+4.LRU
+5.L FU
+6.Second Chance
+7.Exit
+Enter your choice:7
+*/
