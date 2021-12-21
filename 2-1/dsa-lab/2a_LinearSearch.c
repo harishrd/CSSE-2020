@@ -8,7 +8,7 @@ int main() {
 	for(i=0;i<n;i++)
 		scanf("%d",&list[i]);
 	printf("\nEnter the element to be searched: ");
-	scanf("%d",&search);	
+	scanf("%d",&search);
 	for(i=0;i<n;i++){
 		if(search==list[i]){
 			printf("\nElement(%d) found at position %d.",search,i+1);
@@ -17,5 +17,5 @@ int main() {
 	}
 	if(i==n)
 		printf("\n%d is not present in the array.",search);
-		
+	return 0;	
 }

@@ -7,7 +7,7 @@ int main() {
 	printf("\nEnter the %d integers: ",n);
 	for(i=0;i<n;i++)
 		scanf("%d",&list[i]);
-		
+
 	for(i=1;i<n;i++) {
 		temp=list[i];
 		for(j=i;j>0 && temp<list[j-1];j--) {
@@ -15,6 +15,7 @@ int main() {
 		}
 		list[j] = temp;
 	}
+	
 	printf("\nSorted array in ascending order: ");
 	for(i=0;i<n;i++)
 		printf("\t%d",list[i]);

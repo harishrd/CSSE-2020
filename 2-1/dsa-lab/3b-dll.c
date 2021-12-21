@@ -151,33 +151,33 @@ void deqdemo()
             case 2:
                 first=deletefront();
                 break;
-            case 3: 
+            case 3:
                 first=insertend();
                 break;
-            case 4: 
+            case 4:
                 first=deleteend();
                 break;
-            case 5: 
+            case 5:
                 display();
                 break;
-            default: 
+            default:
                 return;
         }
     }
 }
 
 void search()
-{	
+{
 	NODE temp;
 	temp = first;
-	
+
 	char id[25];
 	int flag=0,index=1;
 	printf("\nEnter the employee's id to search: ");
 	scanf("%s",id);
-	
+
 	printf("%s",id);
-	
+
 	while(temp->rlink != NULL)
 	{	index++;
 		temp = temp->rlink;
@@ -192,7 +192,7 @@ void search()
 		printf("\nEmployee with id: %s doesn't exist!", id);
 }
 
-int menu() // can prevent menu taking up the screen
+void menu() // can prevent menu taking up the screen
 {
     int ch;
 	printf("\n\n~~~Menu~~~");
@@ -222,23 +222,23 @@ void main()
         if(m == 'm')
         ch = menu();
         switch(ch)
-        {   
+        {
             case 1:
                 printf("\nEnter the no of Employees:   ");
                 scanf("%d",&n);
                 for(i=1;i<=n;i++)
                     first = insertend();
                 break;
-            case 2: 
+            case 2:
                 display();
                 break;
-            case 3: 
+            case 3:
                 first = insertend();
                 break;
-            case 4: 
+            case 4:
                 first = deleteend();
                 break;
-            case 5: 
+            case 5:
                 first = insertfront();
                 break;
             case 6:
@@ -250,7 +250,7 @@ void main()
             case 8:
             	search();
             	break;
-            case 9 : 
+            case 9 :
                 exit(0);
             default:
                 printf("\nPlease Enter the valid choice");

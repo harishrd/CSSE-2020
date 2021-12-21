@@ -13,7 +13,7 @@ if(amt > 0) :
          disc = 0.15 * amt
 
     print("Discount : ", disc)
-    print("Net Pay  : ", amt-disc)
+    print("Net Pay  : ", amt - disc)
 else:
     print("Invalid Amount")
 

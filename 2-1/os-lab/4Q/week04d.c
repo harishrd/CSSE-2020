@@ -10,41 +10,41 @@ main()
 	for(i=0;i<n;i++)
 	{
 		scanf("%d",&bt[i]);
-		t[i]=i;
+		t[i]=bt[i];
 	}
 	printf("\n Enter the time quantum");
 	scanf("%d",&tq);
-//	while(1)
-	//{
+	while(1)
+	{
 		for(i=0;i<n;i++)
 		{
 			temp=tq;
 			if(t[i]==0)
 			{
-				count ++;
+				count++;
 				continue;
 			}
 			if(t[i]>tq)
 			{
-			t[i]=t[i]-tq;
-		    }
+				t[i]=t[i]-tq;
+		   }
 			else
 			if(t[i]>=0)
 			{
 				temp=t[i];
 				t[i]=0;
 			}
-			sq=tq=temp;
+			sq=tq=temp; //or sq = sq + temp;
 			tat[i]=sq;
 		}
 		if(n<=count)
-		//break;
-	//}
+		break;
+	}
 	for(i=0;i<n;i++)
 	{
 		wt[i]=tat[i]-bt[i];
-		swt=swt+wt[i];
-		stat=stat+tat[i];
+		swt=swt+wt[i]; //sum wait time
+		stat=stat+tat[i]; //sum turnaround time
 	}
 	awt=(float)swt/n;
 	atat=(float)stat/n;
