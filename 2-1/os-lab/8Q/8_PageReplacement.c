@@ -87,7 +87,7 @@ void fifo()
 	dispPgFaultCnt(); 
 }
 
-void optimal()
+void optimal() //ERR
 {
 	initialize();
 	int near[50];
@@ -135,7 +135,7 @@ void optimal()
 	dispPgFaultCnt();
 }
 
-void lru() 
+void lru() //
 {     
 	initialize();       
 	int least[50];     
