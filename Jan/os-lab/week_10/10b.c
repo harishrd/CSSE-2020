@@ -46,7 +46,7 @@ void main()
 		goto x;
 	else
 		exit(0);
-	getch();
+	getch(); // why?
 }	
 
 /* Output:
@@ -63,7 +63,7 @@ Enter index of starting block and length:
 2-------->1 
 3 Block is already allocated 
 4-------->1 
-Do you want to enter more file(Yes - 1/No - 0) 
+Do you want to enter more file(Yes:1/No:0) 
 0
 
 */
