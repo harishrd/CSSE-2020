@@ -1,4 +1,4 @@
-# 12) a) Draw a Scatter Plot by considering an appropriate data set.
+# 12.a) Draw a Scatter Plot by considering an appropriate data set.
 
 import matplotlib.pyplot as plt
 
