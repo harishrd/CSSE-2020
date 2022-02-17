@@ -1,4 +1,4 @@
-//9  Implement the following Disk Scheduling Algorithms   
+//9  Implement the following Disk Scheduling Algorithms
 //a) FCFS
 
 #include<stdio.h>
@@ -9,7 +9,7 @@ int main()
 	printf("Enter the no. of Requests: ");
 	scanf("%d", &n);
 	printf("\nEnter the Requests sequence:\n");
-	for (i = 0; i < n; ++i)
+	for (i=0; i<n; ++i)
 	{
 		scanf("%d", &RQ[i]);
 	}
@@ -25,10 +25,9 @@ int main()
 }
 
 /*
-OUTPUT: 
-Enter the number of Request: 8 
-Enter the Requests Sequence: 95 180 34 119 11 123 62 64 
-Enter initial head position: 50 
+OUTPUT:
+Enter the number of Request: 8
+Enter the Requests Sequence: 95 180 34 119 11 123 62 64
+Enter initial head position: 50
 Total head movement is: 644
-/*
-
+*/
