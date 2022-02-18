@@ -1,4 +1,4 @@
-// 6. a) Develop a program to convert an infix expression to postfix expression using stack 
+// 6. a) Develop a program to convert an infix expression to postfix expression using stack
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
@@ -87,40 +87,3 @@ void infixToPostfix(char infix_exp[], char postfix_exp[])
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -17,11 +17,11 @@ int main()
 {
 	int choice, value;
 	printf("\n-----Stack using Linked List-----\n");
-	
+
 	menu:
 	printf("\n***MENU***\n");
-	printf("1.Push\n2.Pop\n3.Display\n4.Exit\n0.Show menu\n");
-		
+	printf("1.Push\n2.Pop\n3.Display\n4.Exit\n0.View menu\n");
+
 	while(1)
 	{
 		printf("\n\nEnter your choice: ");
@@ -72,7 +72,6 @@ void pop()
 		printf("\nStack is empty");
 	else
 	{
-		
 		printf("\nelement(%d) popped out", temp->data);
 		top = temp->next;
 		free(temp);

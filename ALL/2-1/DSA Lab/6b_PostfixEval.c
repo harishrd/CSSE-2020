@@ -1,4 +1,4 @@
- // 6.b) Write a program to evaluate given postfix expression using stack 
+ // 6.b) Write a program to evaluate given postfix expression using stack
 
 #include<stdio.h>
 #include<ctype.h>
@@ -16,7 +16,7 @@ void push(int item)
 	{
 		top++;
 		stack[top] = item;
-	}	
+	}
 }
 
 int pop()
@@ -91,4 +91,3 @@ int main()
 	EvalPostfix(postfix);
 	return 0;
 }
-
