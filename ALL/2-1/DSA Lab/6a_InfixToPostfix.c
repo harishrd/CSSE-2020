@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include<ctype.h>
 #include<string.h>
+
 #define SIZE 100
 
 char stack[SIZE];
