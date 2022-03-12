@@ -12,10 +12,10 @@ struct philosp
 	int right;
 }Philostatus[n];
 
-void goForDinner(int phillD)
+void goForDinner(int philID)
 {
-	if(Philostatus[phillD].left == 10 && Philostatus[phillD].right == 10)
-		printf("Philosopher %d completed his dinner\n", phillD+1);
+	if(Philostatus[philID].left == 10 && Philostatus[philID].right == 10)
+		printf("Philosopher %d completed his dinner\n", philID+1);
 	//if already completed dinner
 	else if(Philostatus[phillD].left==1 && Philostatus[phillD].right==1)
 	{
@@ -25,7 +25,7 @@ void goForDinner(int phillD)
 		int otherFork = phillD-1;
 		if(otherFork == -1)
 			otherFork=(n-1);
-		
+
 		ForkAvil[phillD].taken = ForkAvil[otherFork].taken = 0; //releasing forks
 		printf("Philosopher %d released fork %d and fork %d\n", phillD+1, otherFork+1);
 		compltedPhilo++;
@@ -46,14 +46,14 @@ void goForDinner(int phillD)
 		} else { //except last philosopher case
 			int dupphillD = phillD;
 			phillD -= 1;
-			
+
 			if(phillD == 1)
 			{
 				phillD = (n-1);
-				
+
 				if(ForkAvil[phillD].taken == 0) {
 					ForkAvil[phillD].taken = Philostatus[dupphillD].right = 1;  //END OF PAGE 1
-					printf("Fork %d taken by Philosopher %d\n", phillD+1, dupphillD+1); 
+					printf("Fork %d taken by Philosopher %d\n", phillD+1, dupphillD+1);
 				} else {
 					printf("Philosopher % is waiting for fork %d\n", dupphillD+1,phillD+1);
 				}
@@ -94,16 +94,3 @@ int main()
 	}
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
