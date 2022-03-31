@@ -1,41 +1,41 @@
-// 4. b) Develop a menu driven program to implement queue operations using arrays 
+// 4. b) Develop a menu driven program to implement queue operations using arrays
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #define MAXSIZE 5
 
-void insert();  
-void delete();  
-void display();  
-int front = -1, rear = -1;  
-int queue[MAXSIZE];  
+void insert();
+void delete();
+void display();
+int front = -1, rear = -1;
+int queue[MAXSIZE];
 
-int main ()  
-{  
-    int choice;   
-    while(choice != 4)   
-    {     
-        printf("\n1.Insert an element\n2.Delete an element\n3.Display the queue\n4.Exit\n");  
-        printf("\nEnter your choice:");  
-        scanf("%d",&choice);  
-        switch(choice)  
-        {  
-            case 1:  
-            	insert();  
-            	break;  
-            case 2:  
-            	delete();  
-           		break;  
-            case 3:  
-            	display();  
-            	break;  
-            case 4:
-            	exit(0);
-            default:
-            	printf("\nInvalid choice!");
-		}
-	}
-	return 0;	
+int main ()
+{
+   int choice;
+   while(choice != 4)
+   {
+      printf("\n1.Insert an element\n2.Delete an element\n3.Display the queue\n4.Exit\n");
+      printf("\nEnter your choice:");
+      scanf("%d",&choice);
+      switch(choice)
+      {
+         case 1:
+            insert();
+            break;
+         case 2:
+            delete();
+            break;
+         case 3:
+            display();
+            break;
+         case 4:
+            exit(0);
+         default:
+            printf("\nInvalid choice!");
+      }
+   }
+	return 0;
 }
 
 void insert()
@@ -55,49 +55,49 @@ void insert()
 	}
 	else
 		rear ++;
-	
 	queue[rear] = item;
-	printf("\nValue inserted");
+	printf("\nvalue inserted");
 }
 
-void delete()  
-{  
-    int item;   
-    if (front == -1 || front > rear)  
-    {  
-        printf("\nUNDERFLOW\n");  
-        return;         
-    }  
-    else  
-    {  
-        item = queue[front];  
-        if(front == rear)  
-        {  
-            front = -1;  
-            rear = -1 ;  
-        }  
-        else  
-		{
-			front = front + 1;
-		} 
-        printf("\nValue deleted ");  
-    }  
+void delete()
+{
+   int item;
+   if (front == -1 || front > rear)
+   {
+      printf("\nUNDERFLOW\n");
+      return;
+   }
+   else
+   {
+      item = queue[front];
+      if(front == rear)
+      {
+         front = -1;
+         rear = -1 ;
+      }
+      else
+      {
+         front = front + 1;
+      }
+      printf("\nValue deleted ");
+   }
 }
 
 void display()
 {
-	int i;  
-    if(rear == -1)  
-    {  
-        printf("\nEmpty queue\n");  
-    }  
-    else  
-    {   printf("\nPrinting values .....\n");  
-        for(i=front;i<=rear;i++)  
-        {  
-            printf("\n%d\n",queue[i]);  
-        }     
-    }  
+   int i;
+   if(rear == -1)
+   {
+      printf("\nEmpty queue\n");
+   }
+   else
+   {
+      printf("\nPrinting values .....\n");
+      for(i=front;i<=rear;i++)
+      {
+         printf("\n%d\n",queue[i]);
+      }
+   }
 }
 
 /*
@@ -154,7 +154,7 @@ Value inserted
 
 Enter your choice:2
 
-value deleted 
+value deleted
 1.Insert an element
 2.Delete an element
 3.Display the queue
@@ -177,7 +177,3 @@ Enter your choice:4
 
 
 */
-
-
-
-

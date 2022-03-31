@@ -194,20 +194,20 @@ void search()
 
 void menu() // can prevent menu taking up the screen
 {
-    int ch;
-	printf("\n\n~~~Menu~~~");
-	printf("\n1:Create DLL of Employee Nodes");
-    printf("\n2:DisplayStatus");
-	printf("\n3:InsertAtEnd");
-    printf("\n4:DeleteAtEnd");
-    printf("\n5:InsertAtFront");
-    printf("\n6:DeleteAtFront");
-    printf("\n7:Double Ended Queue Demo using DLL");
-    printf("\n8:Search an Employee with ID");
-    printf("\n9:Exit \n");
-    printf("\nPlease enter your choice: ");
-    scanf("%d",&ch);
-    return ch;
+   // int ch;
+   printf("\n\n~~~Menu~~~");
+   printf("\n1:Create DLL of Employee Nodes");
+   printf("\n2:DisplayStatus");
+   printf("\n3:InsertAtEnd");
+   printf("\n4:DeleteAtEnd");
+   printf("\n5:InsertAtFront");
+   printf("\n6:DeleteAtFront");
+   printf("\n7:Double Ended Queue Demo using DLL");
+   printf("\n8:Search an Employee with ID");
+   printf("\n9:Exit \n");
+   // printf("\nPlease enter your choice: ");
+   // scanf("%d",&ch);
+   // return ch;
 }
 
 void main()
@@ -217,10 +217,13 @@ void main()
     while(1)
     {
     	int ch;
-        printf("\npress m to display menu");
-//        sca
-        if(m == 'm')
-        ch = menu();
+        printf("\nMenu(0)\n");
+        scanf("%d",&ch);
+        if(ch == 0){
+           menu();
+           continue;
+        }
+
         switch(ch)
         {
             case 1:

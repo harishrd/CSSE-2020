@@ -1,20 +1,21 @@
-// 10 Implement the following file allocation strategies:   
+// 10 Implement the following file allocation strategies:
 // a) CONTIGUOUS ALLOCATION
 
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
 
-void main()
+int main()
 {
 	int f[50], i, st, len, j, c, k, count=0;
 	for(i=0;i<50;i++)
 		f[i]=0;
 	printf("Files Allocated are:\n");
-	x: count=0;
+	x:
+	count=0;
 	printf("Enter starting block and length of files:\n");
 	scanf("%d%d", &st, &len);
-	for(k=st;k<=(st+len-1);k++)
+	for(k=st; k<=(st+len-1); k++) //starting block to st+len-1
 	{
 		if(f[k]==0)
 			count++;
@@ -41,12 +42,13 @@ void main()
 	else
 		exit(0);
 	getch(); //why??
+	return 0;
 }
 
 /*Output:
 
 Files allocated are:
-Enter starting block and length of files: 
+Enter starting block and length of files:
 3 4
 3	1
 4	1

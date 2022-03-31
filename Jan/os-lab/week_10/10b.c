@@ -1,4 +1,4 @@
-// 10 Implement the following file allocation strategies:   
+// 10 Implement the following file allocation strategies:
 // b) LINKED ALLOCATION
 
 #include<stdio.h>
@@ -29,12 +29,12 @@ void main()
 			if (f[j]==0)
 			{
 				f[j]=1;
-				printf("%d-------->%d\n",j,f[j]); 
+				printf("%d----->%d\n",j,f[j]);
 			}
 			else
 			{
 				printf("%d Block is already allocated\n", j);
-				k++;
+				k++; //compensate the already allocated block
 			}
 		}
 	}
@@ -47,23 +47,23 @@ void main()
 	else
 		exit(0);
 	getch(); // why?
-}	
+}
 
 /* Output:
 
-Enter how many blocks already allocated: 
-3 
-Enter blocks already allocated: 
-1 
+Enter how many blocks already allocated:
+3
+Enter blocks already allocated:
+1
 3
 5
 Enter index of starting block and length:
 2
 2
-2-------->1 
-3 Block is already allocated 
-4-------->1 
-Do you want to enter more file(Yes:1/No:0) 
+2----->1
+3 Block is already allocated
+4----->1
+Do you want to enter more file(Yes:1/No:0)
 0
 
 */
