@@ -1,2 +1,12 @@
+COST ACCOUNTING AND FINANCIAL MANAGEMENT:
+---> https://www.icsi.edu/media/webmodules/publications/2.%20CMA-Executive.pdf
+---> https://www.ddegjust.ac.in/studymaterial/bba/bba-304.pdf
 
-https://analyticsindiamag.com/neural-networks-not-work-like-human-brains-lets-debunk-myth/
+
+DBMS: basic definitions
+--->https://www.emsisd.com/cms/lib/TX21000533/Centricity/Domain/71/Database_Terminology_and_Concepts.pdf
+--->https://analyticsindiamag.com/neural-networks-not-work-like-human-brains-lets-debunk-myth/
+
+Python digital notes
+--->https://mrcet.com/downloads/digital_notes/IT/(R18A0513)Python%20Programming.pdf
+
