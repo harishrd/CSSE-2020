@@ -1,0 +1,11 @@
+
+SQL> create table Student (
+  2  SID        int     PRIMARY KEY,
+  3  SName      varchar(30)     NOT NULL,
+  4  DID        int     NOT NULL,
+  5  DOB        date    NOT NULL,
+  6  Gender     char(1) not null        check(Gender = 'M' or Gender = 'F'),
+  7  Address    varchar(10)     NULL,
+  8  Mobile     varchar(10)     NULL,
+  9  FOREIGN KEY(DID) references Department(DID) );
+create table Student (
