@@ -1,0 +1,324 @@
+create table Employee (
+EID	int	PRIMARY KEY,
+EName	varchar(40)	NOT NULL,
+DID	int	NOT NULL,
+Salary	money	NOT NULL,
+Gender	char(1)	NOT NULL,
+City	varchar(30)	NU	LL,	
+Mobile varchar(10)	NULL,
+FOREIGN KEY	DID	references Department(DID) );
+
+
+
+create table Employee (
+EID	int	PRIMARY KEY,
+EName	varchar(40)	NOT NULL,
+DID	int	NOT NULL,
+Salary	money	NOT NULL,
+Gender	char(1)	NOT NULL,
+City	varchar(30)	NULL,	
+Mobile varchar(10)	NULL,
+FOREIGN KEY	DID	references Department(DID) );
+
+
+
+ERROR at line 4:
+ORA-00907: missing right parenthesis
+
+
+SQL> create table Student (
+  2  SID        int     PRIMARY KEY,
+  3  SName      varchar(30)     NOT NULL,
+  4  DID        int     NOT NULL,
+  5  DOB        date    NOT NULL,
+  6  Gender     char(1) NOT NULL        check(Gender = 'M' or Gender = 'F'),
+  7  Address    varchar(10)     NULL,
+  8  Mobile     varchar(10)     NULL,
+  9  FOREIGN KEY(DID) references Department(DID) );
+
+Table created.
+
+SQL> select * from Student
+  2  ;
+
+no rows selected
+
+SQL> EDIT
+SP2-0110: Cannot create save file "afiedt.buf"
+SQL> edit
+SP2-0110: Cannot create save file "afiedt.buf"
+SQL> edit/
+
+SQL> ;
+  1  select * from Student
+  2*
+SQL> create table Employee (
+  2  EID        int     PRIMARY KEY;
+EID     int     PRIMARY KEY
+                          *
+ERROR at line 2:
+ORA-00907: missing right parenthesis
+
+
+SQL> edit/
+
+SQL> edit/
+
+SQL> create table Employee (
+  2  EID        int     PRIMARY KEY,
+  3  fsda;
+fsda
+   *
+ERROR at line 3:
+ORA-00907: missing right parenthesis
+
+
+SQL> create table Employee( EID int PRIMARY KEY, EName varchar(40) NOT NULL, DID
+ int NOT NULL, Salary money NOT NULL, Gender char(1) NOT NULL, City varchar(30)
+NULL, Mobile varchar(10) NULL, FOREIGN KEY DID references Department(DID) );
+create table Employee( EID      int PRIMARY KEY, EName varchar(40) NOT NULL, DID
+ int NOT NULL, Salary money NOT NULL, Gender char(1) NOT NULL, City varchar(30)
+NULL, Mobile varchar(10) NULL, FOREIGN KEY DID references Department(DID) )
+
+
+                                           *
+ERROR at line 1:
+ORA-00906: missing left parenthesis
+
+
+SQL> create table Employee( EID int PRIMARY KEY, EName varchar(40) NOT NULL, DID
+ int NOT NULL, Salary money NOT NULL, Gender char(1) NOT NULL, City varchar(30)
+NULL, Mobile varchar(10) NULL, FOREIGN KEY DID references Department(DID) );
+create table Employee( EID      int PRIMARY KEY, EName varchar(40) NOT NULL, DID
+ int NOT NULL, Salary money NOT NULL, Gender char(1) NOT NULL, City varchar(30)
+NULL, Mobile varchar(10) NULL, FOREIGN KEY DID references Department(DID) )
+
+
+                                           *
+ERROR at line 1:
+ORA-00906: missing left parenthesis
+
+
+SQL> edit/
+
+SQL> edit/random
+
+SQL> edit/employee
+
+SQL> edit/d1
+
+SQL> edit/employee.sql
+
+SQL> edit/employee.sql
+
+SQL> drop table Employee
+  2  ;
+drop table Employee
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> create table Employee (
+  2  EID        int     PRIMARY KEY,
+  3  EName      varchar(40)     NOT NULL,
+  4  DID        int     NOT NULL,
+  5  Salary     money NOT NULL,
+  6  Gender     char(1) NOT NULL,
+  7  City       varchar(10) NULL,
+  8  FOREIGN KEY DID references Department(DID) );
+FOREIGN KEY DID references Department(DID) )
+            *
+ERROR at line 8:
+ORA-00906: missing left parenthesis
+
+
+SQL> FOREIGN KEY(DID) references Department(DID) );
+SP2-0734: unknown command beginning "FOREIGN KE..." - rest of line ignored.
+SQL> create table Employee (
+  2  EID        int     PRIMARY KEY,
+  3  EName      varchar(40)     NOT NULL,
+  4  DID        int     NOT NULL,
+  5  Salary     money NOT NULL,
+  6  Gender     char(1) NOT NULL,
+  7  City       varchar(10) NULL,
+  8  Mobile     varchar(10)     NULL,
+  9  FOREIGN KEY(DID) references Department(DID) );
+Salary  money NOT NULL,
+        *
+ERROR at line 5:
+ORA-00902: invalid datatype
+
+
+SQL> create table Employee (
+  2  EID        int     PRIMARY KEY,
+  3  EName      varchar(40)     NOT NULL,
+  4  DID        int     NOT NULL,
+  5  Salary     float   NOT NULL,
+  6  Gender     char(1) NOT NULL,
+  7  City       varchar(10) NULL,
+  8  Mobile     varchar(10)     NULL,
+  9  FOREIGN KEY(DID) references Department(DID) );
+
+Table created.
+
+SQL> desc Student;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+
+ SID                                       NOT NULL NUMBER(38)
+ SNAME                                     NOT NULL VARCHAR2(30)
+ DID                                       NOT NULL NUMBER(38)
+ DOB                                       NOT NULL DATE
+ GENDER                                    NOT NULL CHAR(1)
+ ADDRESS                                            VARCHAR2(10)
+ MOBILE                                             VARCHAR2(10)
+
+SQL> desc Employee;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+
+ EID                                       NOT NULL NUMBER(38)
+ ENAME                                     NOT NULL VARCHAR2(40)
+ DID                                       NOT NULL NUMBER(38)
+ SALARY                                    NOT NULL FLOAT(126)
+ GENDER                                    NOT NULL CHAR(1)
+ CITY                                               VARCHAR2(10)
+ MOBILE                                             VARCHAR2(10)
+
+SQL> desc Employee;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+
+ EID                                       NOT NULL NUMBER(38)
+ ENAME                                     NOT NULL VARCHAR2(40)
+ DID                                       NOT NULL NUMBER(38)
+ SALARY                                    NOT NULL FLOAT(126)
+ GENDER                                    NOT NULL CHAR(1)
+ CITY                                               VARCHAR2(10)
+ MOBILE                                             VARCHAR2(10)
+
+SQL> insert into Student(1566, Hari, 15, M, 701, 9999)
+  2  ;
+insert into Student(1566, Hari, 15, M, 701, 9999)
+                    *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword
+
+
+SQL> insert into Student values (1566, Hari, 15, M, 701, 9999)
+  2  ;
+insert into Student values (1566, Hari, 15, M, 701, 9999)
+            *
+ERROR at line 1:
+ORA-00947: not enough values
+
+
+SQL> insert into Student values (1566, Hari, 15, 02-04-2002, M, 701, 9999)
+  2  ;
+insert into Student values (1566, Hari, 15, 02-04-2002, M, 701, 9999)
+                                                        *
+ERROR at line 1:
+ORA-00984: column not allowed here
+
+
+SQL> insert into Student values (1566, Hari, 15, 02-04-2002, 'M', 701, 9999);
+insert into Student values (1566, Hari, 15, 02-04-2002, 'M', 701, 9999)
+                                  *
+ERROR at line 1:
+ORA-00984: column not allowed here
+
+
+SQL> insert into Student values (1566, 'Hari', 15, 02-04-2002, 'M', 701, 9999);
+insert into Student values (1566, 'Hari', 15, 02-04-2002, 'M', 701, 9999)
+                                                   *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> insert into Student values (1566, 'Hari', 15, 02/04/2002, 'M', 701, 9999);
+insert into Student values (1566, 'Hari', 15, 02/04/2002, 'M', 701, 9999)
+                                                   *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> insert into Student values (1566, 'Hari', 15, '02-04-2002', 'M', 701, 9999)
+;
+insert into Student values (1566, 'Hari', 15, '02-04-2002', 'M', 701, 9999)
+                                              *
+ERROR at line 1:
+ORA-01843: not a valid month
+
+
+SQL> insert into Student values (1566, 'Hari', 15, 02-04-02, 'M', 701, 9999);
+insert into Student values (1566, 'Hari', 15, 02-04-02, 'M', 701, 9999)
+                                                   *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> insert into Student values (1566, 'Hari', 15, 02-APR-2002, 'M', 701, 9999);
+
+insert into Student values (1566, 'Hari', 15, 02-APR-2002, 'M', 701, 9999)
+                                                 *
+ERROR at line 1:
+ORA-00984: column not allowed here
+
+
+SQL> insert into Student values (1566, 'Hari', 15, '02'-'APR'-'2002', 'M', 701,
+9999);
+insert into Student values (1566, 'Hari', 15, '02'-'APR'-'2002', 'M', 701, 9999)
+
+                                                        *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> insert into Student values (1566, 'Hari', 15, '2002-04-02', 'M', 701, 9999)
+;
+insert into Student values (1566, 'Hari', 15, '2002-04-02', 'M', 701, 9999)
+                                              *
+ERROR at line 1:
+ORA-01861: literal does not match format string
+
+
+SQL> insert into Student values (1566, 'Hari', 15, '02-APR-2002', 'M', 701, 9999
+);
+insert into Student values (1566, 'Hari', 15, '02-APR-2002', 'M', 701, 9999)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (U20121A1566.SYS_C0019551) violated - parent
+key not found
+
+
+SQL> insert into Student values (1566, 'Hari', 15, '02-JAN-2002', 'M', 701, 9999
+);
+insert into Student values (1566, 'Hari', 15, '02-JAN-2002', 'M', 701, 9999)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (U20121A1566.SYS_C0019551) violated - parent
+key not found
+
+
+SQL> insert into Student values (1566, 'Hari', 15, TO_DATE('02-JAN-2002'), 'M',
+701, 9999);
+insert into Student values (1566, 'Hari', 15, TO_DATE('02-JAN-2002'), 'M', 701,
+9999)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (U20121A1566.SYS_C0019551) violated - parent
+key not found
+
+
+SQL> delete DOB in Student
+  2  ;
+delete DOB in Student
+           *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> from table Student delete DOB
+SP2-0734: unknown command beginning "from table..." - rest of line ignored.
+SQL> delete from Student where

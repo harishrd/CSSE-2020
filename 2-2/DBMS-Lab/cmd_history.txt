@@ -1,0 +1,300 @@
+      *
+ERROR at line 1:
+ORA-00940: invalid ALTER command
+
+
+SQL> alter table Student drop DOB
+  2  ;
+alter table Student drop DOB
+                         *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> DESC Student
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+
+ SID                                       NOT NULL NUMBER(38)
+ SNAME                                     NOT NULL VARCHAR2(30)
+ DID                                       NOT NULL NUMBER(38)
+ DOB                                       NOT NULL DATE
+ GENDER                                    NOT NULL CHAR(1)
+ ADDRESS                                            VARCHAR2(10)
+ MOBILE                                             VARCHAR2(10)
+
+SQL> alter table Student drop column DOB
+  2  ;
+
+Table altered.
+
+SQL> DESC Student
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+
+ SID                                       NOT NULL NUMBER(38)
+ SNAME                                     NOT NULL VARCHAR2(30)
+ DID                                       NOT NULL NUMBER(38)
+ GENDER                                    NOT NULL CHAR(1)
+ ADDRESS                                            VARCHAR2(10)
+ MOBILE                                             VARCHAR2(10)
+
+SQL> insert into Student values (1566, 'Hari', 15, 'M', 701, 9999);
+insert into Student values (1566, 'Hari', 15, 'M', 701, 9999)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (U20121A1566.SYS_C0019551) violated - parent
+key not found
+
+
+SQL> select * from table Student
+  2  ;
+select * from table Student
+                    *
+ERROR at line 1:
+ORA-00906: missing left parenthesis
+
+
+SQL> select * from Student
+  2  ;
+
+no rows selected
+
+SQL> insert into Department values (;
+insert into Department values (
+                              *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> DESC Department
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+
+ DID                                       NOT NULL NUMBER(38)
+ DNAME                                     NOT NULL VARCHAR2(10)
+
+SQL> insert into Department values (15, 'CSSE')
+  2  '
+  3  ;
+ERROR:
+ORA-01756: quoted string not properly terminated
+
+
+SQL> insert into Department values (15, 'CSSE');
+
+1 row created.
+
+SQL> desc Department
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+
+ DID                                       NOT NULL NUMBER(38)
+ DNAME                                     NOT NULL VARCHAR2(10)
+
+SQL> insert into Department values (05, 'CSE'),
+  2  insert into Department values (12, 'IT'),
+  3  insert into Department values (29, 'CSBS'),
+  4  insert into Department values (01, 'CIVIL');
+insert into Department values (05, 'CSE'),
+                                         *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> insert into Department values (05, 'CSE'),
+  2  insert into Department values (12, 'IT'),
+  3  insert into Department values (29, 'CSBS'),
+  4  insert into Department values (01, 'CIVIL')
+  5  ;
+insert into Department values (05, 'CSE'),
+                                         *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> insert into Department values (05, 'CSE'),
+  2  insert into Department values (12, 'IT'),
+  3  insert into Department values (29, 'CSBS'),
+  4  insert into Department values (01, 'CIVIL')
+  5  ;
+insert into Department values (05, 'CSE'),
+                                         *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> insert into Department values (05, 'CSE');
+
+1 row created.
+
+SQL> insert into Department values (12, 'IT');
+
+1 row created.
+
+SQL> insert into Department values (29, 'CSBS');
+
+1 row created.
+
+SQL> insert into Department values (01, 'CIVIL');
+
+1 row created.
+
+SQL> SELECT * from Department order by DID desc
+  2  ;
+
+       DID DNAME
+---------- ----------
+        29 CSBS
+        15 CSSE
+        12 IT
+         5 CSE
+         1 CIVIL
+
+SQL> SELECT * from Department
+  2  ;
+
+       DID DNAME
+---------- ----------
+        15 CSSE
+         5 CSE
+        12 IT
+        29 CSBS
+         1 CIVIL
+
+SQL> SELECT * from Department order by DID
+  2  ;
+
+       DID DNAME
+---------- ----------
+         1 CIVIL
+         5 CSE
+        12 IT
+        15 CSSE
+        29 CSBS
+
+SQL> insert into Student values (1566, 'Hari', 15, 'M', 701, 9999);
+
+1 row created.
+
+SQL> insert into Student values (1500, 'abc', 15, 'M', 701, 7699);
+
+1 row created.
+
+SQL> select * from Student
+  2  ;
+
+       SID SNAME                                 DID G ADDRESS    MOBILE
+---------- ------------------------------ ---------- - ---------- ----------
+      1566 Hari                                   15 M 701        9999
+      1500 abc                                    15 M 701        7699
+
+SQL> desc Employee
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+
+ EID                                       NOT NULL NUMBER(38)
+ ENAME                                     NOT NULL VARCHAR2(40)
+ DID                                       NOT NULL NUMBER(38)
+ SALARY                                    NOT NULL FLOAT(126)
+ GENDER                                    NOT NULL CHAR(1)
+ CITY                                               VARCHAR2(10)
+ MOBILE                                             VARCHAR2(10)
+
+SQL> insert into Employee values(899, 'adfsd', 15, 789878, 'M', 'TPTY', 988989);
+
+
+1 row created.
+
+SQL> select * Student order by SID
+  2  ;
+select * Student order by SID
+         *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select * from Student order by SID
+  2  ;
+
+       SID SNAME                                 DID G ADDRESS    MOBILE
+---------- ------------------------------ ---------- - ---------- ----------
+      1500 abc                                    15 M 701        7699
+      1566 Hari                                   15 M 701        9999
+
+SQL> select * from Employee order by DID
+  2  ;
+
+       EID ENAME                                           DID     SALARY G
+---------- ---------------------------------------- ---------- ---------- -
+CITY       MOBILE
+---------- ----------
+       899 adfsd                                            15     789878 M
+TPTY       988989
+
+
+SQL> select * from Employee order by DID
+  2  ;
+
+       EID ENAME                                           DID     SALARY G
+---------- ---------------------------------------- ---------- ---------- -
+CITY       MOBILE
+---------- ----------
+       899 adfsd                                            15     789878 M
+TPTY       988989
+
+
+SQL> select * from Department order by DID
+  2  ;
+
+       DID DNAME
+---------- ----------
+         1 CIVIL
+         5 CSE
+        12 IT
+        15 CSSE
+        29 CSBS
+
+SQL> select * from Department order by DID
+  2  ;
+
+       DID DNAME
+---------- ----------
+         1 CIVIL
+         5 CSE
+        12 IT
+        15 CSSE
+        29 CSBS
+
+SQL> insert into Student values (2926, 'Bob', 29, 'M', 701, 9999);
+
+1 row created.
+
+SQL> update Student set Mobile = 346634 where SID = 2926
+  2  ;
+
+1 row updated.
+
+SQL> select * from Student order by SID
+  2  ;
+
+       SID SNAME                                 DID G ADDRESS    MOBILE
+---------- ------------------------------ ---------- - ---------- ----------
+      1500 abc                                    15 M 701        7699
+      1566 Hari                                   15 M 701        9999
+      2926 Bob                                    29 M 701        346634
+
+SQL> select * from Employee order by DID
+  2  ;
+
+       EID ENAME                                           DID     SALARY G
+---------- ---------------------------------------- ---------- ---------- -
+CITY       MOBILE
+---------- ----------
+       899 adfsd                                            15     789878 M
+TPTY       988989
+
+
+SQL> tables order by Student ASC
+SP2-0734: unknown command beginning "tables ord..." - rest of line ignored.
+SQL>
