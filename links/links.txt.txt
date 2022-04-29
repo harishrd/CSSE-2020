@@ -10,3 +10,5 @@ DBMS: basic definitions
 Python digital notes
 --->https://mrcet.com/downloads/digital_notes/IT/(R18A0513)Python%20Programming.pdf
 
+Graph terminologies:
+http://courses.ics.hawaii.edu/ReviewICS241/morea/graphs/Graphs2-QA.pdf
