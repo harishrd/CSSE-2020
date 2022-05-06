@@ -12,3 +12,10 @@ Python digital notes
 
 Graph terminologies:
 http://courses.ics.hawaii.edu/ReviewICS241/morea/graphs/Graphs2-QA.pdf
+
+Hackerrank vidyanikethan:
+https://www.hackerrank.com/test/4qr9j1rl4mi
+https://www.hackerrank.com/test/60sfa969m7k/a275125e0c0d0390929e2b1c889d68b9
+https://www.hackerrank.com/test/7605c2196c8/650c1f1609dfd47dc2f31324dbf8f1a2
+https://www.hackerrank.com/test/4qr9j1rl4mi
+
