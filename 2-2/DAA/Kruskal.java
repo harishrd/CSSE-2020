@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Kruskal
 {
 	int parent[] = new int[10];
-	int find(int m)  takes an element and returns its index(p)
+	int find(int m) // takes an element and returns its parent vertex in the MSTree index(p)
 	{
 		int p = m;
 		while(parent[p] != 0)
@@ -23,31 +23,34 @@ public class Kruskal
 	void krkl(int[][]a, int n)
 	{
 		int u=0, v=0, min, k=0, i, j, sum=0;
-		while(k < n-1)
+		while(k < n-1) // k keeps track of the no. of edges
 		{
 			min = 99;
-			for(i=1; i<=n; i++)
-				for(j=1; j<=n; j++)
+			for(i=1; i<=n; i++) {
+				for(j=1; j<=n; j++) {
 					if(a[i][j] < min && i != j)
 					{
 						min = a[i][j];
 						u = i;
 						v = j;
 					}
-					i = find(u);
-					j = find(v); 
-					if (i != j) {
-						union(i,j);
-						System.out.println("("+u+","+v+")"+"="+a[u][v]);
-						sum += a[u][v];
-						k++;
-					}
-					a[u][v] = a[v][u] = 99;
+				}
+			}
+			i = find(u); // returns the parent of u
+			j = find(v); // returns the parent of v
+			if (i != j) { // check for a cycle
+				union(i,j);
+				System.out.println("("+u+","+v+")"+"="+a[u][v]);
+				sum += a[u][v];
+				k++;
+			}
+			a[u][v] = a[v][u] = 99;
 		}
 		System.out.println("The cost of minimum spanning tree = " + sum);
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		int a[][] = new int[10][10];
 		int i, j;
 		System.out.println("Enter the number of vertices of the graph: ");
@@ -58,16 +61,16 @@ public class Kruskal
 		for(i=1; i<=n; i++)
 			for(j=1; j<=n; j++)
 				a[i][j] = sc.nextInt();
-			Kruskal k = new Kruskal();
-			k.krkl(a,n);
-			sc.close();
+		Kruskal k = new Kruskal();
+		k.krkl(a,n);
+		sc.close();
 	}
 }
 
 /* OUTPUT:
-Enter the number of vertices of the graph: 
+Enter the number of vertices of the graph:
 4
-Enter the weighted matrix: 
+Enter the weighted matrix:
 0       2       99      4
 2       0       6       99
 99      6       0       8
