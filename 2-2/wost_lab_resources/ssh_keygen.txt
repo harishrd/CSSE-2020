@@ -1,0 +1,7 @@
+1. create ssh key
+>> ssh-keygen -t   rsa   -C "harishrd321@gmail.com"
+	       ^(mode)
+
+2. open the created .pub file in notepad
+3. add the ssh key in github (www.github.com/settings/keys)
+4. confirm it with command $ ssh -T git@github.com
